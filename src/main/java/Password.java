@@ -33,7 +33,7 @@ public class Password {
                             return false;
                     }
                 } else if (helpChar == '!' || helpChar == '(' || helpChar == ')' || helpChar == '%' || helpChar == '/' || helpChar == '@' || helpChar == '#'
-                        || helpChar == '?' || helpChar == '$')
+                        || helpChar == '?' || helpChar == '$') {
                     specialChar++;
 
             }

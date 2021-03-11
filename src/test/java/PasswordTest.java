@@ -67,7 +67,7 @@ public class PasswordTest {
     @DisplayName("Testing password for illegal rows of numbers")
     @Test
     void checkPassword_illegalRowNumbers2(){
-        Boolean actual = Password.checkPassword("123FhCampusWien0!456asd");
+        Boolean actual = Password.checkPassword("123FhCampusWien0!asd");
         Assertions.assertFalse(actual);
     }
 
@@ -82,7 +82,7 @@ public class PasswordTest {
     @DisplayName("Testing password for same numbers >3x in a row")
     @Test
     void checkPassword_numbersMore3xInARow2(){
-        Boolean actual = Password.checkPassword("FhCampusWien!1111asd");
+        Boolean actual = Password.checkPassword("FhCampus2222Wien!1111asd");
         Assertions.assertFalse(actual);
     }
 
@@ -100,13 +100,11 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
-    @DisplayName("Testing password for spaces")
+    @DisplayName("Testing password for whitespaces   ")
     @Test
-    void checkPassword_whitespaces(){
-        Boolean actual = Password.checkPassword("Fh Campus Wien ! 157");
+    void checkPassword_whitespaces2(){
+        Boolean actual = Password.checkPassword("           FH Campus Wien ! 1");
         Assertions.assertFalse(actual);
     }
-
-
 
 }
