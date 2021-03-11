@@ -60,5 +60,10 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
-
+    @DisplayName("Testing password for spaces")
+    @Test
+    void checkPassword_spaces(){
+        Boolean actual = Password.checkPassword("FhCampusWien! 1");
+        Assertions.assertFalse(actual);
+    }
 }
