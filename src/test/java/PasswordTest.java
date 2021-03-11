@@ -27,8 +27,15 @@ public class PasswordTest {
 
     @DisplayName("Testing password for letter cases")
     @Test
-    void checkPassword_UpperAndLowerCase() {
+    void checkPassword_UpperAndLowerCase1() {
         Boolean actual = Password.checkPassword("aaaaaaaaaaa");
+        Assertions.assertFalse(actual);
+    }
+
+    @DisplayName("Testing password for letter cases")
+    @Test
+    void checkPassword_UpperAndLowerCase2(){
+        Boolean actual = Password.checkPassword("1111aa1111111");
         Assertions.assertFalse(actual);
     }
 }
