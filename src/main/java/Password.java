@@ -23,6 +23,11 @@ public class Password {
             }else if(Character.isDigit(helpChar)){
                 numberCounter++;
                 if(i <= password.length()-3) {
+                    if ((int) helpChar == (int) password.charAt(i + 1)  && (int) helpChar == (int) password.charAt(i + 2) &&
+                        (int) helpChar == (int) password.charAt(i + 3))
+                        return false;
+                }
+                if(i <= password.length()-2) {
                     if ((int) helpChar == (int) password.charAt(i + 1) - 1 && (int) helpChar == (int) password.charAt(i + 2) - 2)
                         return false;
                 }

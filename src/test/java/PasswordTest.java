@@ -67,7 +67,7 @@ public class PasswordTest {
     @DisplayName("Testing password for illegal rows of numbers")
     @Test
     void checkPassword_illegalRowNumbers2(){
-        Boolean actual = Password.checkPassword("123FhCampusWien0!456");
+        Boolean actual = Password.checkPassword("123FhCampusWien0!456asd");
         Assertions.assertFalse(actual);
     }
 
@@ -82,7 +82,10 @@ public class PasswordTest {
     @DisplayName("Testing password for same numbers >3x in a row")
     @Test
     void checkPassword_numbersMore3xInARow2(){
-        Boolean actual = Password.checkPassword("FhCampusWien!1111");
+        Boolean actual = Password.checkPassword("FhCampusWien!1111asd");
         Assertions.assertFalse(actual);
     }
+
+
+
 }
