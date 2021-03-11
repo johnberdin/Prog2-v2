@@ -93,7 +93,7 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
-    @DisplayName("Testing password for whitespaces  ")
+    @DisplayName("Testing password for whitespaces   ")
     @Test
     void checkPassword_whitespaces(){
         Boolean actual = Password.checkPassword("FH Campus Wien ! 1");
