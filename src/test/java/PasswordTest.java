@@ -45,4 +45,20 @@ public class PasswordTest {
         Boolean actual = Password.checkPassword("FhCampusWien");
         Assertions.assertFalse(actual);
     }
+
+    @DisplayName("Testing password for special chars")
+    @Test
+    void checkPassword_specChars(){
+        Boolean actual = Password.checkPassword("FhCampusWien0!");
+        Assertions.assertFalse(actual);
+    }
+
+    @DisplayName("Testing password for current positive password")
+    @Test
+    void checkPassword_TrueTest(){
+        Boolean actual = Password.checkPassword("1111111Fd111");
+        Assertions.assertTrue(actual);
+    }
+
+
 }

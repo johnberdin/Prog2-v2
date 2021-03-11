@@ -12,6 +12,7 @@ public class Password {
         int lowerCaseCounter = 0;
         int upperCaseCounter = 0;
         int numberCounter = 0;
+        int specialChar = 0;
         for(int i = 0; i < password.length(); i++){
             helpChar = password.charAt(i);
             if(Character.isLowerCase(helpChar)){
