@@ -18,9 +18,11 @@ public class Password {
                 lowerCaseCounter++;
             }else if(Character.isUpperCase(helpChar)){
                 upperCaseCounter++;
+            }else if(Character.isDigit(helpChar)){
+                numberCounter++;
             }
         }
-        if(lowerCaseCounter == 0 || upperCaseCounter == 0) {
+        if(lowerCaseCounter == 0 || upperCaseCounter == 0 || numberCounter == 0) {
             return false;
         }
         return true;
