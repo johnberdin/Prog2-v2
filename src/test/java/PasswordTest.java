@@ -86,6 +86,13 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
+    @DisplayName("Testing password for null entries")
+    @Test
+    void checkPassword_Null(){
+        Boolean actual = Password.checkPassword(null);
+        Assertions.assertFalse(actual);
+    }
+
 
 
 }
