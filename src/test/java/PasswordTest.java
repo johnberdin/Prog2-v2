@@ -2,6 +2,12 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+/**
+ * LINK OF THE REPO: https://github.com/johnberdin/Prog2-v2.git
+ */
+
+
 public class PasswordTest {
 
 
@@ -103,8 +109,15 @@ public class PasswordTest {
     @DisplayName("Testing password for whitespaces   ")
     @Test
     void checkPassword_whitespaces2(){
-        Boolean actual = Password.checkPassword("           FH Campus Wien ! 1");
+        Boolean actual = Password.checkPassword("          ");
         Assertions.assertFalse(actual);
+    }
+
+    @DisplayName("Testing passwordchecker for a positive password")
+    @Test
+    void checkPassword_true(){
+        Boolean actual = Password.checkPassword("FhCampusWien!1");
+        Assertions.assertTrue(actual);
     }
 
 }
