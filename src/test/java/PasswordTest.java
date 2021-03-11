@@ -5,11 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PasswordTest {
 
 
-    @BeforeEach
-    void setup() {
-        System.out.println("Setup started");
-        System.out.println("Setup finish");
-    }
+
 
     @DisplayName("Testing password for the minimum length")
     @Test
@@ -35,7 +31,7 @@ public class PasswordTest {
     @DisplayName("Testing password for letter cases")
     @Test
     void checkPassword_UpperAndLowerCase2(){
-        Boolean actual = Password.checkPassword("1111aa1111111");
+        Boolean actual = Password.checkPassword("1122aa3314411");
         Assertions.assertFalse(actual);
     }
 
@@ -63,8 +59,15 @@ public class PasswordTest {
     @DisplayName("Testing password for illegal rows of numbers")
     @Test
     void checkPassword_illegalRowNumbers(){
-        Boolean actual = Password.checkPassword("FhCampusWien0!123");
+        Boolean actual = Password.checkPassword("FhCampusWien0!456");
         Assertions.assertFalse(actual);
     }
 
+
+    @DisplayName("Testing password for illegal rows of numbers")
+    @Test
+    void checkPassword_illegalRowNumbers2(){
+        Boolean actual = Password.checkPassword("123FhCampusWien0!456");
+        Assertions.assertFalse(actual);
+    }
 }

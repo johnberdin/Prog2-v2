@@ -13,6 +13,7 @@ public class Password {
         int upperCaseCounter = 0;
         int numberCounter = 0;
         int specialChar = 0;
+
         for(int i = 0; i < password.length(); i++){
             helpChar = password.charAt(i);
             if(Character.isLowerCase(helpChar)){
@@ -21,6 +22,10 @@ public class Password {
                 upperCaseCounter++;
             }else if(Character.isDigit(helpChar)){
                 numberCounter++;
+                if(i <= password.length()-3) {
+                    if ((int) helpChar == (int) password.charAt(i + 1) - 1 && (int) helpChar == (int) password.charAt(i + 2) - 2)
+                        return false;
+                }
             }else if(helpChar == '!' || helpChar == '(' ||helpChar == ')' ||helpChar == '%' ||helpChar == '/' ||helpChar == '@'|| helpChar == '#'
                     || helpChar == '?' || helpChar == '$')
                 specialChar++;
