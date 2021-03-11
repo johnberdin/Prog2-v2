@@ -38,4 +38,11 @@ public class PasswordTest {
         Boolean actual = Password.checkPassword("1111aa1111111");
         Assertions.assertFalse(actual);
     }
+
+    @DisplayName("Testing password for numbers")
+    @Test
+    void checkPassword_Numbers(){
+        Boolean actual = Password.checkPassword("FhCampusWien");
+        Assertions.assertFalse(actual);
+    }
 }
