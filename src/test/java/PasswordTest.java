@@ -60,5 +60,11 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
+    @DisplayName("Testing password for illegal rows of numbers")
+    @Test
+    void checkPassword_illegalRowNumbers(){
+        Boolean actual = Password.checkPassword("FhCampusWien0!123");
+        Assertions.assertFalse(actual);
+    }
 
 }
