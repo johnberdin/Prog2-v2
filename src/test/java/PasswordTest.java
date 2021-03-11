@@ -46,24 +46,19 @@ public class PasswordTest {
         Assertions.assertFalse(actual);
     }
 
-    @DisplayName("Testing password for special chars")
+    @DisplayName("Testing password for the wrong special chars")
     @Test
-    void checkPassword_specChars(){
-        Boolean actual = Password.checkPassword("FhCampusWien0!");
+    void checkPassword_wrongSpecChars(){
+        Boolean actual = Password.checkPassword("FhCampusWien0-");
         Assertions.assertFalse(actual);
     }
 
-    @DisplayName("Testing password for null")
+    @DisplayName("Testing password for the wrong special chars")
     @Test
-    void checkPassword_null(){
-        Boolean actual = Password.checkPassword(null);
+    void checkPassword_wrongSpecChars2(){
+        Boolean actual = Password.checkPassword("FhCampusWien0~");
         Assertions.assertFalse(actual);
     }
 
-    @DisplayName("Testing password for spaces")
-    @Test
-    void checkPassword_spaces(){
-        Boolean actual = Password.checkPassword("FhCampusWien! 1");
-        Assertions.assertFalse(actual);
-    }
+
 }
