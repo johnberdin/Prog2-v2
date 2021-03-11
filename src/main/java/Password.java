@@ -35,6 +35,7 @@ public class Password {
                 } else if (helpChar == '!' || helpChar == '(' || helpChar == ')' || helpChar == '%' || helpChar == '/' || helpChar == '@' || helpChar == '#'
                         || helpChar == '?' || helpChar == '$')
                     specialChar++;
+
             }
             if (lowerCaseCounter == 0 || upperCaseCounter == 0 || numberCounter == 0 || specialChar == 0) {
                 return false;
