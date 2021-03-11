@@ -70,4 +70,19 @@ public class PasswordTest {
         Boolean actual = Password.checkPassword("123FhCampusWien0!456");
         Assertions.assertFalse(actual);
     }
+
+
+    @DisplayName("Testing password for same numbers >3x in a row")
+    @Test
+    void checkPassword_numbersMore3xInARow(){
+        Boolean actual = Password.checkPassword("1111FhCampusWien!");
+        Assertions.assertFalse(actual);
+    }
+
+    @DisplayName("Testing password for same numbers >3x in a row")
+    @Test
+    void checkPassword_numbersMore3xInARow2(){
+        Boolean actual = Password.checkPassword("FhCampusWien!1111");
+        Assertions.assertFalse(actual);
+    }
 }
